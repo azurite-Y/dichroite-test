@@ -22,17 +22,17 @@ public interface StudentMapper {
 	@QueryWhere(name = "&x",mode = QueryTemplate.parallel)
 	List<Student> selectByPojo(Student student);
 
-	@MapperMethod(value = "insert into student(&x) value(&y)",sqlCommandType = SqlCommandType.INSERT)
+	@MapperMethod(value = "insert into student(&x) values(&y)", sqlCommandType = SqlCommandType.INSERT)
 	@InsertValue(name = "&x", value = "&y")
 	@Transactional
 	Integer insertStudent(Student student);
 	
-	@MapperMethod(value = "delete from student where &x",sqlCommandType = SqlCommandType.DELETE)
+	@MapperMethod(value = "delete from student where &x", sqlCommandType = SqlCommandType.DELETE)
 	@QueryWhere(name = "&x")
 	@Transactional
 	Integer deleteByStudent(Student student);
 	
-	@MapperMethod(value = "update student set &x where &y",sqlCommandType = SqlCommandType.UPDATE)
+	@MapperMethod(value = "update student set &x where &y", sqlCommandType = SqlCommandType.UPDATE)
 	@QueryWhere(name = "&y")
 	@UpdateSet(name = "&x")
 	@Transactional

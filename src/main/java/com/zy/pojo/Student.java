@@ -6,6 +6,11 @@ import java.util.List;
 import org.zy.dichroite.fluorite.annotation.BeanMapping;
 import org.zy.dichroite.fluorite.annotation.Column;
 
+/**
+ * 应用于动态 SQL 的 JavaBean
+ * @author Azurite
+ *
+ */
 @BeanMapping
 public class Student implements Serializable {
 	private static final long serialVersionUID = -8378578783782189563L;

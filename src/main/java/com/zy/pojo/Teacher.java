@@ -5,9 +5,15 @@ import java.util.List;
 
 import org.zy.dichroite.fluorite.annotation.BeanMapping;
 
-@SuppressWarnings("serial")
+/**
+ * 应用于参数绑定的 JavaBean
+ * @author Azurite
+ *
+ */
 @BeanMapping
 public class Teacher implements Serializable {
+	private static final long serialVersionUID = 5223499874112063183L;
+	
 	private int tid;
 	private String tname;
 	private List<Integer> ids;
